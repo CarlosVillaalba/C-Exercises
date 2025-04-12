@@ -1,0 +1,30 @@
+using System;
+
+namespace VentasMensuales
+{
+    class Program
+    {
+        static void Main(string[]args)
+        {
+            double[] ventas = new double[30];
+            int k=0,total=0;
+            Console.WriteLine("Ingresa las 30 ventas del mes");
+            for (int i=0;i<ventas.Length;i++)
+            {
+                Console.WriteLine("Venta"+(i +1));
+                ventas[i]=double.Parse(Console.ReadLine());
+            }
+            while(k<30)
+            {
+                if(ventas[k]>=1000)
+                {
+                    Console.WriteLine(ventas[k];)
+                    total++;
+                }
+                k++;
+            }
+            Console.WriteLine("Cantidad de ventas superiores a 1000"+total);
+            Console.ReadKey();
+        }
+    }
+}
