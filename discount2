@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double totalCompra = 250.0;
+        double descuentoPorcentaje = 0;
+
+        if (totalCompra >= 200)
+            descuentoPorcentaje = 15;
+        else if (totalCompra >= 100)
+            descuentoPorcentaje = 10;
+        else if (totalCompra >= 50)
+            descuentoPorcentaje = 5;
+
+        double descuento = totalCompra * (descuentoPorcentaje / 100);
+        double totalFinal = totalCompra - descuento;
+
+        Console.WriteLine($"Total de compra: ${totalCompra}");
+        Console.WriteLine($"Descuento aplicado: {descuentoPorcentaje}%");
+        Console.WriteLine($"Total a pagar: ${totalFinal}");
+    }
+}

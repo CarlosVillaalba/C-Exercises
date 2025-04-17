@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double totalCompra = 180.0;
+        string tipoCliente = "VIP"; // Cambia a "Nuevo", "Regular" o "VIP"
+
+        double descuentoPorcentaje = tipoCliente switch
+        {
+            "Nuevo" => 5,
+            "Regular" => 10,
+            "VIP" => 20,
+            _ => 0
+        };
+
+        double descuento = totalCompra * (descuentoPorcentaje / 100);
+        double totalFinal = totalCompra - descuento;
+
+        Console.WriteLine($"Cliente: {tipoCliente}");
+        Console.WriteLine($"Total de compra: ${totalCompra}");
+        Console.WriteLine($"Descuento: {descuentoPorcentaje}% (${descuento})");
+        Console.WriteLine($"Total final: ${totalFinal}");
+    }
+}

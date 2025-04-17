@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double precioOriginal = 100.0;
+        double descuentoPorcentaje = 10.0; // 10%
+
+        double descuento = precioOriginal * (descuentoPorcentaje / 100);
+        double precioFinal = precioOriginal - descuento;
+
+        Console.WriteLine($"Precio original: ${precioOriginal}");
+        Console.WriteLine($"Descuento: ${descuento}");
+        Console.WriteLine($"Precio final con descuento: ${precioFinal}");
+    }
+}
